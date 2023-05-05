@@ -1,4 +1,5 @@
 import { Grid, Button, Typography } from "@mui/material";
+import StyledLogo from "./UI/StyledLogo";
 
 const NavBar = () => {
   return (
@@ -10,7 +11,7 @@ const NavBar = () => {
     >
       <Grid container sx={{ width: "fit-content" }}>
         <Grid item>
-          <Typography>LOGO</Typography>
+          <StyledLogo />
         </Grid>
         <Grid item>
           <Button sx={{ color: "white" }}>Home</Button>
