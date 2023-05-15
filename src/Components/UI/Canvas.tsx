@@ -43,14 +43,11 @@ const Canvas = (props: CanvasProps) => {
 
     let frameCount = 0;
     let animationFrameId: number;
-
     //Our draw came here
     const render = () => {
       frameCount++;
-      setTimeout(() => {
-        draw(context, frameCount);
-        animationFrameId = window.requestAnimationFrame(render);
-      }, 50);
+      draw(context, frameCount);
+      animationFrameId = window.requestAnimationFrame(render);
     };
     render();
 

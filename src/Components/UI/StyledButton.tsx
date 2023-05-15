@@ -31,14 +31,17 @@ const StyledButton = (props: StyledButtonProps) => {
           sx={{
             ...sx,
             ...sizeCss,
-            border: "4px solid white",
-            color: "white",
+            borderWidth: "4px",
+            "&:hover": {
+              borderWidth: "4px",
+            },
           }}
+          variant="outlined"
           {...otherProps}
         />
       );
     default:
-      return <Button {...otherProps} />;
+      return <Button {...props} />;
   }
 };
 

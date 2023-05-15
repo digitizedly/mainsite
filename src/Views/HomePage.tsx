@@ -21,14 +21,14 @@ const HomePage = () => {
       sx={{ height: "1000px", position: "relative" }}
       ref={ref}
     >
-      <Grid
+      {/*<Grid
         item
         sx={{ position: "absolute", top: 0, zIndex: -1, width: "100%" }}
       >
         <RainCanvas height={height} />
-      </Grid>
+      </Grid>*/}
       <Grid item>
-        <Typography>CONTENT HERE</Typography>
+        <Typography color="secondary">CONTENT HERE</Typography>
       </Grid>
     </Grid>
   );
