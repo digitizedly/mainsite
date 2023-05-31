@@ -1,8 +1,7 @@
-import { Button, ButtonBase, ButtonProps, useTheme } from "@mui/material";
-import { CSSProperties } from "react";
+import { Button, ButtonProps, useTheme } from "@mui/material";
 
 export interface StyledButtonProps extends ButtonProps {
-  variant?: "outlined";
+  variant?: "outlined" | "text";
 }
 
 const StyledButton = (props: StyledButtonProps) => {
@@ -40,6 +39,8 @@ const StyledButton = (props: StyledButtonProps) => {
           {...otherProps}
         />
       );
+    case "text":
+      return <Button sx={{ ...sx, ...sizeCss }} />;
     default:
       return <Button {...props} />;
   }

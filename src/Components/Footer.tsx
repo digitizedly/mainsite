@@ -2,6 +2,8 @@ import { Grid, useTheme } from "@mui/material";
 import StyledButton from "./UI/StyledButton";
 import StyledLogo from "./UI/StyledLogo";
 
+const BOX_SHADOW_LENGTH = -1;
+
 const Footer = () => {
   const theme = useTheme();
   return (
@@ -9,12 +11,14 @@ const Footer = () => {
       container
       justifyContent="space-between"
       sx={{
-        backgroundColor: "black",
-        padding: theme.spacing(4),
-        height: theme.spacing(50),
-        WebkitMask:
-          "radial-gradient(192.94px at 50% 265.00px,#000 99%,#0000 101%) calc(50% - 200px) 0/400px 100%,radial-gradient(192.94px at 50% -165px,#0000 99%,#000 101%) 50% 100px/400px 100% repeat-x;",
-        mask: "radial-gradient(192.94px at 50% 265.00px,#000 99%,#0000 101%) calc(50% - 200px) 0/400px 100%,radial-gradient(192.94px at 50% -165px,#0000 99%,#000 101%) 50% 100px/400px 100% repeat-x;",
+        backgroundColor: theme.palette.secondary.main,
+        padding: theme.spacing(2),
+        height: theme.spacing(25),
+        bottom: 0,
+        position: "absolute",
+        " -webkit-box-shadow": `0px ${BOX_SHADOW_LENGTH}px 20px 10px rgba(0,0,0,0.4)`,
+        "-moz-box-shadow": `0px ${BOX_SHADOW_LENGTH}px 20px 10px rgba(0,0,0,0.4)`,
+        "box-shadow": `0px ${BOX_SHADOW_LENGTH}px 20px 10px rgba(0,0,0,0.4)`,
       }}
     >
       <Grid
